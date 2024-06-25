@@ -1,0 +1,72 @@
+:root {
+    --cor: rgb(64, 64, 64);
+    --cor-clara: rgb(159, 159, 159);
+    --cor-de-erro: rgb(255, 64, 64);
+    --cor-de-sucesso: rgb(64, 128, 64);
+    --cor-escura: rgb(32, 32, 32);
+    --cor-muito-clara: rgb(207, 207, 207);
+    --cor-muito-escura: rgb(16, 16, 16);
+    --cor-pouco-clara: rgb(112, 112, 112);
+    --cor-pouco-escura: rgb(48, 48, 48);
+    --familia-da-fonte: serif;
+    --margem-grande: 8px 8px 8px 8px;
+    --margem-texto: 4px 8px 4px 8px;
+    --tamanho-da-fonte: 16px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--cor);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+button {
+    background-color: var(--cor-pouco-clara);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-clara);
+    color: black;
+}
+
+button:active {
+    background-color: var(--cor-muito-clara);
+    color: black;
+}
+
+button, h1, p, textarea {
+    font-family: var(--familia-da-fonte);
+}
+
+button, p, textarea {
+    font-size: var(--tamanho-da-fonte);
+    margin: var(--margem-grande);
+    padding: var(--margem-texto);
+}
+
+.buttons, #erro, #sucesso {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#erro {
+    background-color: var(--cor-de-erro);
+}
+
+#sucesso {
+    background-color: var(--cor-de-sucesso);
+}
